@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
  * main - Entry point
  *
@@ -7,14 +6,12 @@
  */
 int main(void)
 {
-	char a[26] = "zyxwvutsrqponmlkjihgfdecba";
-	int i;
+	char l;
 
-	for (i = 0; i < 26; i++)
-	{
-		putchar(a[i]);
-	}
-	putchar('\n');
+	for (l = 'z'; l >= 'a'; l--)
+		putchar(l);
+		putchar('\n');
+
 	return (0);
 }
 
