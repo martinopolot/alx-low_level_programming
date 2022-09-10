@@ -1,22 +1,18 @@
-/*
- * Author: Martin Opolot
- * Date: 10-9-22
- */
-
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 /**
- * main - print all single digits numbers of base 10 starting with 0 using putchar and without char
+ * main - Entry point
  *
- * Return: Always 0 (Succesint)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int n;
+	int m;
 
-	for (n = 0; n < 10; n++)
-		putchar((n % 10) + '0');
-
-	putchar('\n');
+	for (m = '0'; m <= '9'; m++)
+		putchar(m);
+		putchar('\n');
 
 	return (0);
 }
