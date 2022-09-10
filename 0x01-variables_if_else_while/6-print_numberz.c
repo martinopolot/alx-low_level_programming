@@ -1,18 +1,15 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 /**
- * main - Entry point
+ * main - Displays numberz
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int d;
+	int i;
 
-	for (d = '0'; d <= '9'; d++)
-		putchar(d);
-		putchar('\n');
-
+	for (i = '0'; i <= '9'; i++)
+		putchar(i);
+	putchar('\n');
 	return (0);
 }
