@@ -1,22 +1,18 @@
-#include <stdio.h>
-#include <unistd.h>
 #include "main.h"
 /**
- * main - Point of entry here
- * _putchar to be printed without using printf or puts
+ * main - Start here
+ *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	_putchar('_');
-	_putchar('p');
-	_putchar('u');
-	_putchar('t');
-	_putchar('c');
-	_putchar('h');
-	_putchar('a');
-	_putchar('r');
-	_putchar('\n');
+	char *ch = "_putchar";
 
-	return (0);
+	while (*ch)
+	{
+		_putchar(*ch);
+		ch++;
+	}
+	_putchar('\n');
+return (0);
 }
