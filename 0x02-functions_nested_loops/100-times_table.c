@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * times_table - this function is called to print table
+ * print_times_table - this function is called to print table
  * Decription: table of 9
  *
  * Return: Always 0. (Success)
  */
-void times_table(void)
+void print_times_table(void)
 {
 	int i, j, k;
 
