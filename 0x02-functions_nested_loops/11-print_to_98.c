@@ -1,20 +1,25 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_to_98 - func to print nural numbers
- * @n: int n
- * Description: display numbers from 0 - 98
+ * print_to_98 - display natural numbers
+ * from 0 to 98
+ * @n: integers only
+ * Return: Always 0.
  */
 void print_to_98(int n)
 {
-	if (n < 98)
+	if (n >= 98)
 	{
-		for (n = 0; n < 97; n++)
-			printf("%d, ", n);
+		while (n > 98)
+			printf("%d, ", n--);
+
+		printf("%d\n", n);
 	}
 	else
-		for (n = n; n <= 97; n--)
-			printf("%d, ", n);
-	printf("98\n");
+	{
+		while (n < 98)
+			printf("%d, ", n++);
 
+		printf("%d\n", n);
+	}
 }
