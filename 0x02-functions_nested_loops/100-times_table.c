@@ -1,20 +1,21 @@
 #include "main.h"
 /**
- * times_table - this function is called to print table
+ * print_times_table - this function is called to print table
+ * @n: integer
  * Decription: table of 9
  *
  * Return: Always 0. (Success)
  */
-void times_table(void)
+void print_times_table(int n)
 {
 	int i, j, k;
 
-	for (i = 0; i <= 9; i++)
+	for (i = 0; i <= n; i++)
 	{
 		_putchar('0');
 		_putchar(',');
 		_putchar(' ');
-	for (j = 1; j <= 9; j++)
+	for (j = 1; j <= n; j++)
 	{
 		k = (i * j);
 	if ((k / 10) > 0)
@@ -26,7 +27,7 @@ void times_table(void)
 		_putchar(' ');
 	}
 		_putchar((k % 10) + '0');
-	if (j < 9)
+	if (j < n)
 	{
 		_putchar(',');
 	      _putchar(' ');
