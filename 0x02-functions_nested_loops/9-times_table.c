@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * 9-times_table - Function to print table
+ * times_table - Function to print table
  * Decription: 9 X 9 table
  *
  * Return: Alwasys 0.
