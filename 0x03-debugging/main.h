@@ -3,6 +3,19 @@
 
 #include <stdio.h>
 
-void positice_or_negative(int i);
+void positive_or_negative(int i);
+{
+	int i;
 
+	if (i > 0)
+	{
+		printf("positive %d\n", i);
+	}
+	else if (i < 0)
+	{
+		printf("negative %d\n", i);
+	}
+	else
+		printf("number is zero %d\n", i);
+}
 #endif /* MAIN_H */
