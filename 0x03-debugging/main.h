@@ -4,18 +4,12 @@
 #include <stdio.h>
 
 void positive_or_negative(int i);
-{
-	int i;
 
-	if (i > 0)
-	{
-		printf("positive %d\n", i);
-	}
-	else if (i < 0)
-	{
-		printf("negative %d\n", i);
-	}
-	else
-		printf("number is zero %d\n", i);
-}
+int largest_number(int a, int b, int c);
+
+void print_remaining_days(int month, int day int year);
+
+int convert_day(int month, int day);
+
 #endif /* MAIN_H */
+
