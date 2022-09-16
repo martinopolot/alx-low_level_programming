@@ -1,12 +1,11 @@
 #include "main.h"
-
 /**
- * print_numbers - function prints numbers 0-9
+ * print_numbers - function to display numbers (0 - 9)
  *
  * Return: void
  */
 
-void print_numbers(void)
+int print_numbers(void)
 {
 	int c;
 
