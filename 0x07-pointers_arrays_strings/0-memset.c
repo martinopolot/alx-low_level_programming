@@ -2,10 +2,10 @@
 
 /**
  * _memset - fills a block of memory with constant byte
- * @s: ptr to memo area
+ * @s: points to constant
  * @b: byte
  * @n: bytes in memory
- * Return: s
+ * Return: *s
  */
 char *_memset(char *s, char b, unsigned int n)
 {
