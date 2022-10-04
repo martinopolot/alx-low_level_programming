@@ -1,30 +1,30 @@
 #include "main.h"
 #include <stdlib.h>
+
 /**
- * _strdup - func that returns a ptr to  allocated space in memory.
- * @str: string char.
+ * _strdup - function to copy string to a newly allocated space in memory
+ * @str: string to copy
  *
- * Return: ptr of an array of chars
+ * Return: ptr to duplicate string || NULL if error
  */
 char *_strdup(char *str)
 {
-	char *strout;
-	unsigned int m, j;
+	unsigned int m, l;
+	char *s;
 
 	if (str == NULL)
 		return (NULL);
-
-	for (m = 0; str[m] != '\0'; m++)
-
-	      ;
+	for (m = 0; str[m]; m++)
+		;
 	m++;
-	strout = (char *) malloc(sizeof(char) * (m + 1));
-
-	if (strout == NULL)
+	s = malloc(m * sizeof(char));
+	if (s == NULL)
+	{
 		return (NULL);
-
-	for (j = 0; j <= m; j++)
-		strout[j] = str[j];
-
-	return (strout);
+	}
+	for (l = 0; l < m; l++)
+	{
+		s[l] = str[l];
+	}
+	return (s);
 }
