@@ -1,0 +1,73 @@
+#include "dog.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * _copy - copy of passed args
+ * @src: copy of data
+ * Return: ptr
+ */
+char *_copy(char *src)
+{
+	char *ptr;
+	int i, length;
+
+	if (src == NULL)
+	{
+		return (NULL);
+	}
+	for (length = 0; src[length] != '\0'; length++)
+		;
+	ptr = malloc(sizeof(char) * (length + 1));
+	if (ptr == NULL)
+	{
+		return (NULL);
+	}
+	for (i = 0; src[i] != '\0'; i++)
+	{
+		ptr[i] = src[i];
+	}
+	ptr[i] = '\0';
+	return (ptr);
+}
+
+/**
+ * new_dog - this creates new variable class
+ * @name: dog's name
+ * @age: age of this dog
+ * @owner: dog's papa
+ * Return: ptr to the dog variable
+ */
+dog_t *new_dog(char *name, float age, char *owner)
+{
+	dog_t *chiwawa;
+	char *new_name, *new_owner;
+
+	if (name == NULL || owner == NULL)
+	{
+		return (NULL);
+	}
+	chiwawa = malloc(sizeof(dog_t));
+	if (chiwawa == NULL)
+	{
+		return (NULL);
+	}
+	new_name = _copy(name);
+	if (new_name == NULL)
+	{
+		free(chiwawa);
+		return (NULL);
+	}
+	(*chiwawa).name = new_name;
+
+	(*chiwawa).age = age;
+	new_owner = _copy(owner);
+	if (new_owner == NULL)
+	{
+		free((*chiwawa).name);
+		free(chiwawa);
+		return (NULL);
+	}
+	(*chiwawa).owner = new_owner;
+	return (chiwawa);
+}
