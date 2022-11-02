@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <fcntl.h>
 
 /**
  * read_textfile - reads a file and prints it to the
@@ -15,12 +16,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int r, w;
 	char *buf;
 
-	if (!filename)
+	if (filename == NULL)
 		return (0);
 
 
 	buf = malloc(sizeof(char) * letters);
-	if (!buf)
+	if (buf == NULL)
 		return (0);
 
 	fd = open(filename, O_RDONLY);
