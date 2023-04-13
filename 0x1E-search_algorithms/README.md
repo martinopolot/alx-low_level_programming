@@ -1,5 +1,5 @@
 # 0x1E. C - Search Algorithms
-#More Info
+# More Info
 - O(1)
 - O(n)
 - O(n!)
